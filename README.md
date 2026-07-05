@@ -1,4 +1,4 @@
-# Multi-Step Student Registration System
+# Student Registration System
 
 A lightweight, fully responsive Multi-Step Student Registration interface engineered with vanilla web technologies. The application processes user registration workflows split across sequential logical sections, validates structured fields natively via custom regex/rules, triggers localized stage confirmations, and commits data persistently on client environments via `localStorage`.
 
