@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+
+    <h1>Student Registration Form</h1>
+
+
+    <div class="steps">
+        <span class="step active" id="step-title-1">Fill details</span>
+        <span class="step" id="step-title-2">Check & submit</span>
+    </div>
+
+    <form id="registration-form">
+
+
+        <div class="form-section" id="section-part-1">
+
+            <h2>Student info</h2>
+
+            <div class="input-group">
+                <label>Your name</label>
+                <input type="text" id="student-name" placeholder="Type your full name">
+                <div class="error-msg" id="name-error-msg"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Age</label>
+                <input type="number" id="student-age" placeholder="Your age">
+                <div class="error-msg" id="age-error-msg"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Phone number</label>
+                <input type="text" id="student-phone" placeholder="03XXXXXXXXX">
+                <div class="error-msg" id="phone-error-msg"></div>
+            </div>
+
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="student-email" placeholder="example@mail.com">
+                <div class="error-msg" id="email-error-msg"></div>
+            </div>
+
+            <button type="button" onclick="validateStepOneAndProceed()">
+                Next
+            </button>
+
+        </div>
+
+
+        <div class="form-section hide-element" id="section-part-2">
+
+            <h2>Quick review</h2>
+
+            <p>Just make sure everything looks fine before saving.</p>
+
+            <div class="review-grid">
+                <div><strong>Name:</strong> <span id="summary-preview-name">-</span></div>
+                <div><strong>Age:</strong> <span id="summary-preview-age">-</span></div>
+                <div><strong>Phone:</strong> <span id="summary-preview-phone">-</span></div>
+                <div><strong>Email:</strong> <span id="summary-preview-email">-</span></div>
+            </div>
+
+            <button type="button" onclick="goBackToStepOne()">
+                Back
+            </button>
+
+            <button type="submit">
+                Save
+            </button>
+
+        </div>
+
+    </form>
+
+  
+    <div class="records-section">
+
+        <h2>Saved records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="student-table-body">
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
